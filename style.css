@@ -1,0 +1,653 @@
+
+/* =========================================
+   IDEA MATES - MAIN STYLESHEET
+   ========================================= */
+
+/* 1. CSS VARIABLES */
+
+:root {
+    --primary: #7955D9;
+    --primary-dark: #6040BA;
+    --primary-light: #F0EBFF;
+    --background: #FFFFFF;
+    --section-bg: #F8F6FD;
+    --text-dark: #25213A;
+    --text-light: #777389;
+    --border: #EAE6F2;
+    --white: #FFFFFF;
+}
+
+/* 2. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: clip;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 30px;
+}
+
+/* 3. NAVIGATION BAR - FLEXBOX */
+
+.header {
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 11px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* 4. HERO SECTION - CSS GRID */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-tag,
+.section-tag {
+    display: inline-block;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 25px 0;
+    max-width: 620px;
+}
+
+.hero-content h1 span,
+.section-heading h2 span,
+.about h2 span {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    font-size: 17px;
+    color: var(--text-light);
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+/* HERO BUTTONS - FLEXBOX */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 23px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.secondary-btn {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* HERO STATS - FLEXBOX */
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.hero-stats h3 {
+    font-size: 16px;
+}
+
+.hero-stats p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* 5. HERO VISUAL */
+
+.hero-visual {
+    min-height: 390px;
+    background: linear-gradient(135deg, #F0EBFF, #E6DCFF);
+    border-radius: 30px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+}
+
+.visual-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 330px;
+    box-shadow: 0 15px 45px rgba(70, 40, 130, 0.12);
+}
+
+.card-label {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 22px 0 12px;
+}
+
+.main-card h3 {
+    margin-bottom: 8px;
+}
+
+.main-card p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.interest-tags span {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 11px;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.match-status {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+    color: #26996B;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.floating-card {
+    position: absolute;
+    background: var(--white);
+    padding: 12px 17px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.floating-one {
+    top: 30px;
+    right: -15px;
+}
+
+.floating-two {
+    bottom: 25px;
+    left: -15px;
+}
+
+/* 6. COMMON SECTION STYLES */
+
+.section-padding {
+    padding: 90px 30px;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    margin: 18px 0;
+    letter-spacing: -1px;
+}
+
+.section-heading p,
+.about > p {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* 7. DISCOVER PEOPLE - CSS GRID */
+
+.discover {
+    background: var(--section-bg);
+}
+
+.people-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* PROFILE CARDS */
+
+.person-card {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person-card:hover,
+.idea-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(70, 40, 130, 0.09);
+}
+
+.person-avatar {
+    width: 75px;
+    height: 75px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.person-card h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.person-card > p {
+    color: var(--text-light);
+    font-size: 13px;
+    min-height: 42px;
+}
+
+.connect-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.connect-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* 8. EXPLORE IDEAS - CSS GRID */
+
+.idea-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.idea-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: var(--white);
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.idea-category {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.idea-card h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 20px 0 12px;
+}
+
+.idea-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.idea-author {
+    color: var(--primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+/* 9. ABOUT SECTION */
+
+.about {
+    background: var(--primary-light);
+    text-align: center;
+}
+
+.about > p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* 10. FOOTER - FLEXBOX */
+
+.footer {
+    padding: 35px 30px;
+    background: #25213A;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .logo {
+    color: var(--white);
+}
+
+.footer > p {
+    color: #C6C1D4;
+    font-size: 13px;
+}
+
+/* =========================================
+   11. TABLET RESPONSIVENESS
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 30px;
+        padding: 70px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .people-grid,
+    .idea-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================
+   12. MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        padding: 17px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 20px;
+        text-align: center;
+        gap: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-visual {
+        min-height: 360px;
+        padding: 25px;
+    }
+
+    .visual-card {
+        padding: 22px;
+    }
+
+    .floating-one {
+        right: 0;
+    }
+
+    .floating-two {
+        left: 0;
+    }
+
+    .section-padding {
+        padding: 65px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .people-grid,
+    .idea-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .person-card {
+        padding: 25px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 20px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media screen and (max-width: 350px) {
+
+    .hero-content h1 {
+        font-size: 31px;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .floating-card {
+        font-size: 10px;
+        padding: 9px;
+    }
+}
+.connect-btn.connected {
+    background-color: #16a34a;
+    color: white;
+    border-color: #16a34a;
+}
