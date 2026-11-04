@@ -1,0 +1,134 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Tasks | IDEA MATES</title>
+
+    <link rel="stylesheet" href="./tasks.css">
+
+    <script src="./tasks.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="./index.html" class="logo">IDEA MATES</a>
+        <a href="./index.html" class="home-link">← Back to Home</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <section class="task-card">
+
+            <div class="heading">
+                <span class="tag">PRODUCTIVITY SPACE</span>
+
+                <h1>My Task Manager</h1>
+
+                <p>
+                    Plan your work. Track your progress.
+                    Achieve more.
+                </p>
+            </div>
+
+            <!-- Add Task -->
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task here..."
+                    maxlength="150"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="addTaskBtn"
+                    type="button"
+                >
+                    + Add Task
+                </button>
+
+            </div>
+
+            <p
+                id="errorMessage"
+                class="error-message"
+                aria-live="polite">
+            </p>
+
+            <!-- Task Statistics -->
+            <div class="task-stats">
+
+                <div>
+                    <strong id="totalCount">0</strong>
+                    <span>Total Tasks</span>
+                </div>
+
+                <div>
+                    <strong id="activeCount">0</strong>
+                    <span>Active</span>
+                </div>
+
+                <div>
+                    <strong id="completedCount">0</strong>
+                    <span>Completed</span>
+                </div>
+
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all"
+                    type="button">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="active"
+                    type="button">
+                    Active
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="completed"
+                    type="button">
+                    Completed
+                </button>
+
+            </div>
+
+            <!-- Tasks Display -->
+            <ul
+                id="taskList"
+                class="task-list"
+                aria-live="polite">
+            </ul>
+
+            <p class="storage-note">
+                ✓ Your tasks are automatically saved in your browser.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 IDEA MATES | Stay Productive 🚀</p>
+    </footer>
+
+</body>
+</html>
+```
