@@ -1,72 +1,70 @@
-# IDEA MATES 🚀
+# IDEA MATES – Component Library UI
 
-**Connect. Collaborate. Create.**
+**Connecting Minds. Empowering Ideas. Building Futures.**
 
-IDEA MATES is a responsive web platform designed to connect students, developers, innovators, and aspiring entrepreneurs. It helps people discover like-minded individuals, share ideas, and find potential collaborators for projects and startups.
+IDEA MATES is a collaboration platform concept that helps students and developers discover projects, connect with like-minded people, and find potential teammates based on their skills and interests.
 
-## ✨ Features
+This project is part of Week 3 of my frontend development journey, focusing on building reusable UI components using HTML, CSS, and JavaScript.
 
-- Responsive landing page for desktop, tablet, and mobile.
-- Member profiles with skills, roles, bios, and social links.
-- Idea cards to showcase and explore innovative ideas.
-- Task management application using JavaScript DOM manipulation.
-- Add, delete, and filter tasks.
-- Mark tasks as completed.
-- Save tasks using browser Local Storage.
+## Features
 
-## 🛠️ Technologies Used
+- **Explore Projects:** View available projects and opportunities.
+- **Create Projects:** Post a project with its title, description, category, required skills, and team size.
+- **Search Projects:** Search projects by title, description, or skills.
+- **Category Filter:** Filter projects by development category.
+- **Project Details:** View individual project information.
+- **Join Project Demo:** Try the join-project interaction.
+- **Local Storage:** Newly created projects are saved in the browser.
+
+## Reusable Components
+
+The project demonstrates three reusable components:
+
+1. **Button Component:** Creates buttons with reusable styles and click functionality.
+2. **Project Card Component:** Displays project information in a consistent card layout.
+3. **Modal Component:** Displays reusable popup windows for project creation and details.
+
+## Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript
-- DOM Manipulation
+- JavaScript (Vanilla JS)
 - Browser Local Storage
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
-Responsive-project/
+IDEA-MATES/
 │
-├── index.html
-├── style.css
-├── script.js
-│
-├── tasks.html
-├── tasks.css
-├── tasks.js
-│
+├── project.html
+├── project.css
+├── project.js
 └── README.md
 ```
 
-## 🚀 How to Run Locally
+## How to Run
 
-1. Clone this repository:
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `project.html`.
+4. Right-click and select **Open with Live Server**.
+5. Explore projects and try creating a new project.
 
-   ```bash
-   git clone https://github.com/sanyasingh20070406-lang/Idea-Mates.git
-   ```
+## Current Limitations
 
-2. Open the project folder.
-3. Open `index.html` in your browser.
-4. Open `tasks.html` to explore the task management application.
+This is a frontend demonstration. Project data is stored in browser Local Storage, so it is not yet shared between different users or devices. User authentication, a database, real team invitations, and smart teammate matching are planned for future development.
 
-## 🎯 Project Goals
+## Learning Outcomes
 
-- Build practical frontend development skills.
-- Understand JavaScript DOM manipulation and events.
-- Learn browser Local Storage.
-- Create responsive and user-friendly interfaces.
-- Build a platform that encourages student collaboration and innovation.
-
-## 👩‍💻 Author
-
-**Sanya Singh**
-
-- GitHub: [sanyasingh20070406-lang](https://github.com/sanyasingh20070406-lang)
-- LinkedIn: [Sanya Singh](https://www.linkedin.com/in/sanya-singh-64497b397/)
-- <img width="1897" height="892" alt="image" src="https://github.com/user-attachments/assets/ebca5756-dec9-49d7-9015-dfd8c576e61d" />
-
+- Creating reusable JavaScript components.
+- Handling DOM manipulation and events.
+- Building interactive forms and modals.
+- Implementing search and category filtering.
+- Using Local Storage to persist browser data.
+- Organizing a frontend project into separate files.
 
 ---
 
-⭐ If you like this project, consider giving it a star!
+**Project:** IDEA MATES  
+**Developer:** Sanya Singh  
+**Status:** Frontend prototype – Under Development
